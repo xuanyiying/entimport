@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/message"
-	"entgo.io/contrib/schemast/internal/printtest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/message"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/predicate"
 )
 
 // MessageQuery is the builder for querying Message entities.

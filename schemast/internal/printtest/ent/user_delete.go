@@ -6,11 +6,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/printtest/ent/user"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/user"
 )
 
 // UserDelete is the builder for deleting a User entity.

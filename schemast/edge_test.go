@@ -21,10 +21,10 @@ import (
 	"testing"
 
 	"entgo.io/contrib/entproto"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/schema"
 	"entgo.io/ent"
 	"entgo.io/ent/schema/edge"
 	"github.com/stretchr/testify/require"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/schema"
 )
 
 func TestFromEdgeDescriptor(t *testing.T) {

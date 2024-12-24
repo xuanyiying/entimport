@@ -7,12 +7,12 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/user"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
 )
 
 // WithModifiedFieldUpdate is the builder for updating WithModifiedField entities.

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
 
 	"entgo.io/ent"
 )

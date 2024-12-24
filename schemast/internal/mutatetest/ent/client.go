@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/migrate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/migrate"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/user"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withnilfields"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withoutfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withnilfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withoutfields"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
@@ -124,7 +124,6 @@ func (c *Client) BeginTx(ctx context.Context, opts *sql.TxOptions) (*Tx, error) 
 //		User.
 //		Query().
 //		Count(ctx)
-//
 func (c *Client) Debug() *Client {
 	if c.debug {
 		return c

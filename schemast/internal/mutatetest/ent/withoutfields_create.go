@@ -6,9 +6,9 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withoutfields"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withoutfields"
 )
 
 // WithoutFieldsCreate is the builder for creating a WithoutFields entity.

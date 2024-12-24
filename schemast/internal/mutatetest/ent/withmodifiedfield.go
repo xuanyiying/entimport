@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/user"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
 	"entgo.io/ent/dialect/sql"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
 )
 
 // WithModifiedField is the model entity for the WithModifiedField schema.

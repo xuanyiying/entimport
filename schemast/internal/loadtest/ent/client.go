@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/contrib/schemast/internal/loadtest/ent/migrate"
+	"github.com/xuanyiying/entimport/schemast/internal/loadtest/ent/migrate"
 
-	"entgo.io/contrib/schemast/internal/loadtest/ent/message"
+	"github.com/xuanyiying/entimport/schemast/internal/loadtest/ent/message"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
@@ -99,7 +99,6 @@ func (c *Client) BeginTx(ctx context.Context, opts *sql.TxOptions) (*Tx, error) 
 //		Message.
 //		Query().
 //		Count(ctx)
-//
 func (c *Client) Debug() *Client {
 	if c.debug {
 		return c

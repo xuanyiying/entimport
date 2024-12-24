@@ -6,11 +6,11 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
 )
 
 // WithModifiedFieldDelete is the builder for deleting a WithModifiedField entity.

@@ -7,14 +7,14 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/user"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withnilfields"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withoutfields"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withnilfields"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withoutfields"
 )
 
 // ent aliases to avoid import conflicts in user's code.
@@ -89,7 +89,6 @@ type AggregateFunc func(*sql.Selector) string
 //	GroupBy(field1, field2).
 //	Aggregate(ent.As(ent.Sum(field1), "sum_field1"), (ent.As(ent.Sum(field2), "sum_field2")).
 //	Scan(ctx, &v)
-//
 func As(fn AggregateFunc, end string) AggregateFunc {
 	return func(s *sql.Selector) string {
 		return sql.As(fn(s), end)

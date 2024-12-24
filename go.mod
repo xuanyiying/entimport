@@ -2,8 +2,6 @@ module github.com/xuanyiying/entimport
 
 go 1.21
 
-toolchain go1.23.2
-
 require (
 	ariga.io/atlas v0.3.8-0.20220314111236-b2171e04c5b2
 	entgo.io/contrib v0.2.1-0.20220405071655-7dbe27ee8fec

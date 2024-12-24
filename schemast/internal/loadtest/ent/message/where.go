@@ -3,8 +3,8 @@
 package message
 
 import (
-	"entgo.io/contrib/schemast/internal/loadtest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
+	"github.com/xuanyiying/entimport/schemast/internal/loadtest/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

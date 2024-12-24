@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withfields"
 )
 
 // WithFieldsQuery is the builder for querying WithFields entities.
@@ -261,7 +261,6 @@ func (wfq *WithFieldsQuery) Clone() *WithFieldsQuery {
 //		GroupBy(withfields.FieldExisting).
 //		Aggregate(ent.Count()).
 //		Scan(ctx, &v)
-//
 func (wfq *WithFieldsQuery) GroupBy(field string, fields ...string) *WithFieldsGroupBy {
 	grbuild := &WithFieldsGroupBy{config: wfq.config}
 	grbuild.fields = append([]string{field}, fields...)
@@ -288,7 +287,6 @@ func (wfq *WithFieldsQuery) GroupBy(field string, fields ...string) *WithFieldsG
 //	client.WithFields.Query().
 //		Select(withfields.FieldExisting).
 //		Scan(ctx, &v)
-//
 func (wfq *WithFieldsQuery) Select(fields ...string) *WithFieldsSelect {
 	wfq.fields = append(wfq.fields, fields...)
 	selbuild := &WithFieldsSelect{WithFieldsQuery: wfq}

@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/user"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withmodifiedfield"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withmodifiedfield"
 )
 
 // WithModifiedFieldQuery is the builder for querying WithModifiedField entities.
@@ -299,7 +299,6 @@ func (wmfq *WithModifiedFieldQuery) WithOwner(opts ...func(*UserQuery)) *WithMod
 //		GroupBy(withmodifiedfield.FieldName).
 //		Aggregate(ent.Count()).
 //		Scan(ctx, &v)
-//
 func (wmfq *WithModifiedFieldQuery) GroupBy(field string, fields ...string) *WithModifiedFieldGroupBy {
 	grbuild := &WithModifiedFieldGroupBy{config: wmfq.config}
 	grbuild.fields = append([]string{field}, fields...)
@@ -326,7 +325,6 @@ func (wmfq *WithModifiedFieldQuery) GroupBy(field string, fields ...string) *Wit
 //	client.WithModifiedField.Query().
 //		Select(withmodifiedfield.FieldName).
 //		Scan(ctx, &v)
-//
 func (wmfq *WithModifiedFieldQuery) Select(fields ...string) *WithModifiedFieldSelect {
 	wmfq.fields = append(wmfq.fields, fields...)
 	selbuild := &WithModifiedFieldSelect{WithModifiedFieldQuery: wmfq}

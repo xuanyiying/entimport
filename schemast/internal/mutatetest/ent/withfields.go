@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
 	"entgo.io/ent/dialect/sql"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/withfields"
 )
 
 // WithFields is the model entity for the WithFields schema.

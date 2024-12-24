@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"log"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/migrate"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/migrate"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/message"
-	"entgo.io/contrib/schemast/internal/printtest/ent/user"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/message"
+	"github.com/xuanyiying/entimport/schemast/internal/printtest/ent/user"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
@@ -105,7 +105,6 @@ func (c *Client) BeginTx(ctx context.Context, opts *sql.TxOptions) (*Tx, error) 
 //		Message.
 //		Query().
 //		Count(ctx)
-//
 func (c *Client) Debug() *Client {
 	if c.debug {
 		return c

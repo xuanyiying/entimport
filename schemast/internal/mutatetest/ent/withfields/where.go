@@ -3,8 +3,8 @@
 package withfields
 
 import (
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
+	"github.com/xuanyiying/entimport/schemast/internal/mutatetest/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.
