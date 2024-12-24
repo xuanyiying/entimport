@@ -2,8 +2,8 @@ package entimport_test
 
 import (
 	"context"
+	"github.com/xuanyiying/entimport/internal/mux"
 	"go/ast"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"testing"
@@ -11,7 +11,6 @@ import (
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/postgres"
 	"ariga.io/atlas/sql/schema"
-	"ariga.io/entimport/internal/mux"
 
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
@@ -4004,16 +4003,6 @@ func (_m *inspectorMock) InspectSchema(ctx context.Context, name string, opts *s
 		r1 = ret.Error(1)
 	}
 	return r0, r1
-}
-
-func createTempDir(t *testing.T) string {
-	tmpDir, err := ioutil.TempDir("", "entimport-*")
-	require.NoError(t, err)
-	t.Cleanup(func() {
-		err = os.RemoveAll(tmpDir)
-		require.NoError(t, err)
-	})
-	return tmpDir
 }
 
 func readDir(t *testing.T, path string) map[string]string {

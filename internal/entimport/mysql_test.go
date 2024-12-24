@@ -3,13 +3,14 @@ package entimport_test
 import (
 	"bytes"
 	"context"
+	"github.com/xuanyiying/entimport/internal/entimport"
 	"go/parser"
 	"go/printer"
 	"go/token"
+	"os"
 	"testing"
 
 	"ariga.io/atlas/sql/schema"
-	"ariga.io/entimport/internal/entimport"
 
 	"entgo.io/ent/dialect"
 	"github.com/go-openapi/inflect"
@@ -376,7 +377,7 @@ func TestMySQL(t *testing.T) {
 				entimport.WithDriver(drv),
 			)
 			r.NoError(err)
-			schemas := createTempDir(t)
+			schemas := os.TempDir()
 			mutations, err := importer.SchemaMutations(ctx)
 			r.NoError(err)
 			err = entimport.WriteSchema(mutations, entimport.WithSchemaPath(schemas))

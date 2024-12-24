@@ -1,10 +1,10 @@
 package entimport
 
 import (
-	"ariga.io/entimport/schemast"
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/xuanyiying/entimport/schemast"
 
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"

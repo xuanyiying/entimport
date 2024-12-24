@@ -6,11 +6,12 @@ import (
 	"go/parser"
 	"go/printer"
 	"go/token"
+	"os"
 	"testing"
 
 	"ariga.io/atlas/sql/schema"
 
-	"ariga.io/entimport/internal/entimport"
+	"github.com/xuanyiying/entimport/internal/entimport"
 
 	"entgo.io/ent/dialect"
 	"github.com/go-openapi/inflect"
@@ -284,7 +285,7 @@ func TestPostgres(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			schemas := createTempDir(t)
+			schemas := os.TempDir()
 			m := mockMux(ctx, dialect.Postgres, tt.mock, testSchema)
 			drv, err := m.OpenImport("postgres://postgres:pass@localhost:5434/test")
 			r.NoError(err)

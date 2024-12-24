@@ -4,12 +4,11 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/xuanyiying/entimport/internal/entimport"
+	"github.com/xuanyiying/entimport/internal/mux"
 	"log"
 	"os"
 	"strings"
-
-	"ariga.io/entimport/internal/entimport"
-	"ariga.io/entimport/internal/mux"
 )
 
 var (

@@ -1,13 +1,13 @@
 package entimport
 
 import (
-	"ariga.io/entimport/schemast"
 	"context"
 	"errors"
 	"fmt"
+	"github.com/xuanyiying/entimport/internal/mux"
+	"github.com/xuanyiying/entimport/schemast"
 
 	"ariga.io/atlas/sql/schema"
-	"ariga.io/entimport/internal/mux"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
@@ -164,6 +164,8 @@ func entEdge(nodeName, nodeType string, currentNode *schemast.UpsertSchema, dir 
 			desc.Name = "parent_" + desc.Name
 			desc.RefName = "child_" + desc.RefName
 		}
+	default:
+		panic("unhandled default case")
 	}
 	desc.Type = nodeType
 	return e

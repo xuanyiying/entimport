@@ -8,12 +8,12 @@ import (
 	"ariga.io/atlas/sql/postgres"
 	"ariga.io/atlas/sql/schema"
 
-	"ariga.io/entimport/schemast"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
 	_ "github.com/lib/pq"
+	"github.com/xuanyiying/entimport/schemast"
 )
 
 // Postgres implements SchemaImporter for PostgreSQL databases.

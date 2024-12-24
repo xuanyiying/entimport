@@ -1,10 +1,10 @@
 package web
 
 import (
-	"ariga.io/entimport/internal/entimport"
-	"ariga.io/entimport/internal/mux"
 	"embed"
 	"errors"
+	"github.com/xuanyiying/entimport/internal/entimport"
+	"github.com/xuanyiying/entimport/internal/mux"
 	"html/template"
 	"log"
 	"net/http"

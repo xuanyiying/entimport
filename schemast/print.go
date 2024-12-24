@@ -57,6 +57,7 @@ func (c *Context) Print(path string, opts ...PrintOption) error {
 				process = []byte(options.headerComment + "\n\n" + s)
 			}
 		}
+		// fix import gorm field
 		if strings.Contains(code, gormFieldImport) {
 			process = []byte(strings.Replace(code, gormFieldImport, entFieldImport, -1))
 		}
