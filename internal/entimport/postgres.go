@@ -8,7 +8,7 @@ import (
 	"ariga.io/atlas/sql/postgres"
 	"ariga.io/atlas/sql/schema"
 
-	"entgo.io/contrib/schemast"
+	"ariga.io/entimport/schemast"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/schema/field"

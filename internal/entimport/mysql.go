@@ -1,6 +1,7 @@
 package entimport
 
 import (
+	"ariga.io/entimport/schemast"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -8,7 +9,6 @@ import (
 	"ariga.io/atlas/sql/mysql"
 	"ariga.io/atlas/sql/schema"
 
-	"entgo.io/contrib/schemast"
 	"entgo.io/ent"
 	"entgo.io/ent/schema/field"
 )

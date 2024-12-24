@@ -1,6 +1,7 @@
 package entimport
 
 import (
+	"ariga.io/entimport/schemast"
 	"context"
 	"errors"
 	"fmt"
@@ -8,7 +9,6 @@ import (
 	"ariga.io/atlas/sql/schema"
 	"ariga.io/entimport/internal/mux"
 
-	"entgo.io/contrib/schemast"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/entsql"

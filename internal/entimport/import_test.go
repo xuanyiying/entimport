@@ -2011,7 +2011,7 @@ func MockPostgresTableFieldsWithAttributes() *schema.Schema {
 		Unique: true,
 		Table:  table,
 		Attrs: []schema.Attr{
-			&postgres.ConType{
+			&postgres.IndexType{
 				T: "p",
 			},
 		},
