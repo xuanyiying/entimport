@@ -129,6 +129,38 @@ func WriteSchema(mutations []schemast.Mutator, opts ...ImportOption) error {
 	return ctx.Print(i.schemaPath, schemast.Header(header))
 }
 
+// WriteSchemaWithFormatting receives a list of mutators, writes an ent schema to a given location in the file system, and applies formatting.
+func WriteSchemaWithFormatting(mutations []schemast.Mutator, opts ...ImportOption) error {
+	i := &ImportOptions{}
+	for _, apply := range opts {
+		apply(i)
+	}
+	ctx, err := schemast.Load(i.schemaPath)
+	if err != nil {
+		return err
+	}
+	if err = schemast.Mutate(ctx, mutations...); err != nil {
+		return err
+	}
+	if err = ctx.Print(i.schemaPath, schemast.Header(header)); err != nil {
+		return err
+	}
+	// Apply formatting to the generated files
+	return FormatGeneratedFiles(i.schemaPath)
+}
+
+// WriteSchema writes the ent schema files to the given path.
+func (i *ImportOptions) WriteSchema(mutations []schemast.Mutator) error {
+	ctx, err := schemast.Load(i.schemaPath)
+	if err != nil {
+		return err
+	}
+	if err = schemast.Mutate(ctx, mutations...); err != nil {
+		return err
+	}
+	return ctx.Print(i.schemaPath, schemast.Header(header))
+}
+
 // entEdge creates an edge based on the given params and direction.
 func entEdge(nodeName, nodeType string, currentNode *schemast.UpsertSchema, dir edgeDir, opts relOptions) (e ent.Edge) {
 	var desc *edge.Descriptor

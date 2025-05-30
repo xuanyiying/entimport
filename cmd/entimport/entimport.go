@@ -51,7 +51,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("entimport: schema import failed - %v", err)
 	}
-	if err = entimport.WriteSchema(mutations, entimport.WithSchemaPath(*schemaPath)); err != nil {
+	if err = entimport.WriteSchemaWithFormatting(mutations, entimport.WithSchemaPath(*schemaPath)); err != nil {
 		log.Fatalf("entimport: schema writing failed - %v", err)
 	}
 }

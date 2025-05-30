@@ -2,7 +2,6 @@ package entimport
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 
 	"ariga.io/atlas/sql/postgres"
@@ -70,7 +69,7 @@ func (p *Postgres) field(column *schema.Column) (f ent.Field, err error) {
 	case *schema.IntegerType:
 		f = p.convertInteger(typ, name)
 	case *schema.JSONType:
-		f = field.JSON(name, json.RawMessage{})
+		f = field.JSON(name, map[string]interface{}{})
 	case *schema.StringType:
 		f = field.String(name)
 	case *schema.TimeType:

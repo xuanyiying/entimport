@@ -2,7 +2,6 @@ package entimport
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 
 	"ariga.io/atlas/sql/mysql"
@@ -75,7 +74,7 @@ func (m *MySQL) field(column *schema.Column) (f ent.Field, err error) {
 	case *schema.IntegerType:
 		f = m.convertInteger(typ, name)
 	case *schema.JSONType:
-		f = field.JSON(name, json.RawMessage{})
+		f = field.JSON(name, map[string]interface{}{})
 	case *schema.StringType:
 		f = field.String(name)
 	case *schema.TimeType:
